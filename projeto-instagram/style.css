@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh ;
+    background-color: rgb(243, 243, 243);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center ;
+/* justify-content: center deixa todo o conteúdo alinhado no meio da tela;*/
+}
+
+.instagram-wrapper {
+    display: flex;
+                /* display: flex. Ele vira o flex-container. 
+              Ou seja, todos os itens dentro dele ficam em linha ocupando o 
+            maior espaço possível da tela*/
+    align-items: center;
+                /*align-itens: center me diz que no vertical (eixo Y), todos os itens vao
+                ficar voltados para o centro
+                */
+    justify-content: start;
+                /*      o diz respeito ao eixo X. tudo ficará centralizado
+                justify-content: start -> conteúdo começa da esquerda para direita
+                justify-content: space-evenly -> a justificaçã entre as bordas da tela e entre os itens serão iguais
+               justify-content: space-around -> o espaço entre os itens é bem maior do que dos lados
+               justify-content: space-between -> zero espaço entre as bordas, todo espaço entre os itens (ficam afastados) 
+               */  
+    width: 60%;    /*tamanho desse bloco que eu criei*/                
+    height: 100vh;  /*altura*/       
+}
+
+.instagram-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.instagram-phone img {
+    height: 50rem;
+}
+
+.instagram-continue {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    /*Isso inverte as coisas. Faz com que o justify-content vire eixo Y e o align-items: vire eixo X;
+    Eu fiz isso pq eu queria que o espaçamento do space-around fosse relativo ao eixo Y
+    */
+    width: 50%;
+    min-height: 35rem;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 2rem 1rem;
+    border: 1px solid lightgray;
+}
+
+.group:nth-child(1){
+    /*Esse nth-child diz qual item que tem dentro desse grupo que eu criei eu estou mexendo. 
+    No exemplo da pg do insta, aquele quadrado cinza com login*/
+    min-width: 19rem;
+}
+
+.instagram-logo {
+    height: 4rem;
+}
+
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    height: 8rem;
+}
+
+.instagram-login {
+    background-color: #0095e6;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.instagram-logout{
+    color: #0095e6;
+    margin-top: 1rem;
+}
+
+.not-account {
+    color: rgb(160, 160, 160);
+}
+
+.link-blue {
+    color: #0095e6;
+}
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+
+}
+
+.app-download:nth-child(1) {
+    background-image: url('./imagens/Ap.png');
+}
+
+.app-download:nth-child(2) {
+    background-image: url('./imagens/goo.png');
+}
+
+@media (max-width: 1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px)  {
+
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-wrapper {
+        width: 90%; 
+    }
+
+    .instagram-phone {
+        display: none;
+    }
+
+    .instagram-continue {
+        width: 100%;
+    }
+
+    .group {
+        border: 1px solid transparent
+    }
+}
+
